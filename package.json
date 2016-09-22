@@ -1,0 +1,30 @@
+{
+  "name": "nodetask",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "task"
+  ],
+  "author": "mahesh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "promise": "^7.1.1",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Growmies/node-exercise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Growmies/node-exercise/issues"
+  },
+  "homepage": "https://github.com/Growmies/node-exercise#readme",
+  "description": ""
+}
