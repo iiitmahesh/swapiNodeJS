@@ -85,24 +85,33 @@ getData(1)
 });
 
 app.get('/planetresidents', function (req, ress) {
-	var x =[];
-	var getData = function(){
+	var x =[]; var temp =[], n= 1;
+	var getData = function(n){
 	request({
 	        method :'GET', 
-	        url : 'http://swapi.co/api/planets'
+	        url : 'http://swapi.co/api/people/'+n+'/',
 			},
 	    	function(err,res,body){
-	    	console.log(err, res.statusCode)
+	    	//console.log(err, res.statusCode)
 		        if(res.statusCode >= 200 && res.statusCode < 400) {
 	                body = JSON.parse(body);
-	            	x = x.concat(body.results)
-	       		//console.log(x)
-	            return ress.send(x)
+	            	x = x.concat(body.homeworld)
+	            	//var y = x.split("/");
+	       		console.log(n)
+	       		n = n+1;
+
+	            return x;
 	        }
 	    })
 	    
 	}
-	getData()
+
+	// for(var i=1; i<=86; i++){
+	// 	temp[i] = getData(i);
+	// }
+if(n != 87){
+temp = getData(n)
+}
 
 });
 
